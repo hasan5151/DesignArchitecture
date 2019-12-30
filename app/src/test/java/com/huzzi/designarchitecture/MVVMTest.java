@@ -52,7 +52,6 @@ public class MVVMTest {
     public void beforeTest(){
         MockitoAnnotations.initMocks(this);
         myViewModel = new MyViewModel(api);
-        verify(observer).onChanged(ApiResponse.ERROR_STATE);
         myViewModel.getStudent().observeForever(observer);
     }
 
